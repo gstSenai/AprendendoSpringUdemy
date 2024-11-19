@@ -1,17 +1,33 @@
 package br.com.gustavosouza.AprendendoSpringUdemy.model;
 
+import jakarta.persistence.*;
+
+
 // POJO -> Plain Old Java Object
+@Entity
+@Table (name = "produto")
 public class Produto {
+
+    @Id
+    @Column(name = "id")
     private String id;
+
+    @Column
     private String nome;
+
+    @Column
     private String descricao;
+
+    @Column
     private double preco;
 
     public String getId() {
+
         return id;
     }
 
     public void setId(String id) {
+
         this.id = id;
     }
 
@@ -48,4 +64,6 @@ public class Produto {
                 ", preco=" + preco +
                 '}';
     }
+
+
 }
